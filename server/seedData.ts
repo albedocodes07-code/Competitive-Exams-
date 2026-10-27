@@ -1,0 +1,863 @@
+import { MCQ, PastPaper, SubjectConfig } from '../src/types/index.ts';
+
+export const SUBJECTS: SubjectConfig[] = [
+  {
+    id: 'english-precis',
+    name: 'English (Precis & Composition)',
+    examCategories: ['CSS', 'PMS'],
+    classificationByExam: {
+      CSS: 'compulsory',
+      PMS: 'compulsory',
+      PPSC: 'screening',
+      FPSC: 'screening',
+    },
+    description: 'Grammar mechanics, precis writing, vocabulary (synonyms/antonyms), idiom usage, and comprehension.',
+    iconName: 'BookOpen',
+  },
+  {
+    id: 'general-science',
+    name: 'General Science',
+    examCategories: ['CSS', 'PPSC', 'FPSC'],
+    classificationByExam: {
+      CSS: 'compulsory',
+      PMS: 'screening',
+      PPSC: 'screening',
+      FPSC: 'screening',
+    },
+    description: 'Physical sciences, biological systems, environmental hazards, solar system, and everyday science.',
+    iconName: 'FlaskConical',
+  },
+  {
+    id: 'general-ability',
+    name: 'General Ability & Mathematics',
+    examCategories: ['CSS', 'PPSC', 'FPSC'],
+    classificationByExam: {
+      CSS: 'compulsory',
+      PMS: 'screening',
+      PPSC: 'screening',
+      FPSC: 'screening',
+    },
+    description: 'Arithmetic calculations, percentages, ratios, algebra, analytical reasoning, and mental ability.',
+    iconName: 'Calculator',
+  },
+  {
+    id: 'pakistan-affairs',
+    name: 'Pakistan Affairs',
+    examCategories: ['CSS', 'PMS', 'PPSC', 'FPSC'],
+    classificationByExam: {
+      CSS: 'compulsory',
+      PMS: 'compulsory',
+      PPSC: 'screening',
+      FPSC: 'screening',
+    },
+    description: 'Constitutional evolution, 1973 Constitution, Freedom Movement (1857-1947), foreign policy, and economy.',
+    iconName: 'Landmark',
+  },
+  {
+    id: 'islamic-studies',
+    name: 'Islamic Studies / Ethics',
+    examCategories: ['CSS', 'PMS', 'PPSC', 'FPSC'],
+    classificationByExam: {
+      CSS: 'compulsory',
+      PMS: 'compulsory',
+      PPSC: 'screening',
+      FPSC: 'screening',
+    },
+    description: 'Quranic teachings, Seerat-un-Nabi (PBUH), Khilafat-e-Rashida, Islamic jurisprudence, and contemporary challenges.',
+    iconName: 'MoonStar',
+  },
+  {
+    id: 'current-affairs',
+    name: 'Current Affairs',
+    examCategories: ['CSS', 'PMS', 'PPSC', 'FPSC'],
+    classificationByExam: {
+      CSS: 'compulsory',
+      PMS: 'screening',
+      PPSC: 'screening',
+      FPSC: 'screening',
+    },
+    description: 'National developments, global diplomacy, UN & international treaties, SCO, OIC, climate change.',
+    iconName: 'Globe',
+  },
+  {
+    id: 'general-knowledge',
+    name: 'General Knowledge',
+    examCategories: ['PMS', 'PPSC', 'FPSC'],
+    classificationByExam: {
+      CSS: 'screening',
+      PMS: 'compulsory',
+      PPSC: 'screening',
+      FPSC: 'screening',
+    },
+    description: 'Punjab PMS 100-mark paper & PPSC One-Paper syllabus: World geography, head of states, straits, capitals, and records.',
+    iconName: 'Compass',
+  },
+  {
+    id: 'computer-knowledge',
+    name: 'Computer Knowledge & IT',
+    examCategories: ['PPSC', 'FPSC'],
+    classificationByExam: {
+      CSS: 'screening',
+      PMS: 'screening',
+      PPSC: 'screening',
+      FPSC: 'screening',
+    },
+    description: 'Computer fundamentals, Microsoft Office shortcuts, operating systems, networking, databases, and cybersecurity.',
+    iconName: 'Laptop',
+  },
+  {
+    id: 'urdu-language',
+    name: 'Urdu Language & Literature',
+    examCategories: ['PMS', 'PPSC'],
+    classificationByExam: {
+      CSS: 'optional',
+      PMS: 'compulsory',
+      PPSC: 'screening',
+      FPSC: 'screening',
+    },
+    description: 'PMS Compulsory 100-mark Urdu Paper & PPSC Urdu portion: Qawaid, Asnaaf-e-Adab, Idioms (Muhawraat), and comprehension.',
+    iconName: 'ScrollText',
+  },
+];
+
+export const INITIAL_MCQS: MCQ[] = [
+  // CSS - Pakistan Affairs
+  {
+    id: 'mcq-css-pa-01',
+    examCategory: 'CSS',
+    subjectId: 'pakistan-affairs',
+    question: 'Under which article of the Constitution of Pakistan (1973) is the Council of Common Interests (CCI) established?',
+    options: ['Article 153', 'Article 160', 'Article 175', 'Article 213'],
+    correctIndex: 0,
+    explanation: 'Article 153 of the 1973 Constitution provides for the constitution and composition of the Council of Common Interests (CCI), which resolves provincial-federal disputes.',
+    sourceYear: 'CSS 2024',
+    difficulty: 'medium',
+    topic: '1973 Constitution & Federalism',
+  },
+  {
+    id: 'mcq-css-pa-02',
+    examCategory: 'CSS',
+    subjectId: 'pakistan-affairs',
+    question: 'The Lucknow Pact of December 1916 was signed jointly by the All India Muslim League and the Indian National Congress primarily due to the efforts of:',
+    options: ['Sir Syed Ahmed Khan', 'Muhammad Ali Jinnah', 'Allama Muhammad Iqbal', 'Maulana Muhammad Ali Jauhar'],
+    correctIndex: 1,
+    explanation: 'Quaid-e-Azam Muhammad Ali Jinnah was titled the "Ambassador of Hindu-Muslim Unity" by Sarojini Naidu for orchestrating the historic Lucknow Pact of 1916.',
+    sourceYear: 'CSS 2023',
+    difficulty: 'easy',
+    topic: 'Pre-Partition Political Developments',
+  },
+  {
+    id: 'mcq-css-pa-03',
+    examCategory: 'CSS',
+    subjectId: 'pakistan-affairs',
+    question: 'Which constitutional amendment in Pakistan abolished the Concurrent Legislative List and granted comprehensive provincial autonomy?',
+    options: ['17th Amendment', '18th Amendment', '19th Amendment', '21st Amendment'],
+    correctIndex: 1,
+    explanation: 'The 18th Constitutional Amendment passed in April 2010 devolved 17 federal ministries to the provinces and abolished the Concurrent Legislative List.',
+    sourceYear: 'CSS 2022',
+    difficulty: 'easy',
+    topic: 'Constitutional Amendments',
+  },
+  {
+    id: 'mcq-css-pa-04',
+    examCategory: 'CSS',
+    subjectId: 'pakistan-affairs',
+    question: 'The Objectives Resolution was passed by the first Constituent Assembly of Pakistan on:',
+    options: ['12 March 1949', '14 August 1947', '23 March 1948', '16 October 1951'],
+    correctIndex: 0,
+    explanation: 'Prime Minister Liaquat Ali Khan moved the historic Objectives Resolution on March 7, 1949, and it was adopted on March 12, 1949 as the foundation of Pakistan constitutional framework.',
+    sourceYear: 'CSS 2021',
+    difficulty: 'easy',
+    topic: 'Early Constitutional History',
+  },
+  {
+    id: 'mcq-css-pa-05',
+    examCategory: 'CSS',
+    subjectId: 'pakistan-affairs',
+    question: 'Under the Indus Waters Treaty (1960) brokered by the World Bank, exclusive rights over the three Western Rivers were allocated to Pakistan. These rivers are:',
+    options: [
+      'Indus, Jhelum, and Chenab',
+      'Ravi, Beas, and Sutlej',
+      'Indus, Ravi, and Sutlej',
+      'Kabul, Swat, and Jhelum'
+    ],
+    correctIndex: 0,
+    explanation: 'The treaty allocated the three eastern rivers (Ravi, Beas, Sutlej) to India and the three western rivers (Indus, Jhelum, Chenab) to Pakistan.',
+    sourceYear: 'CSS 2025',
+    difficulty: 'medium',
+    topic: 'Water Diplomacy & Treaties',
+  },
+
+  // CSS - General Science & Ability
+  {
+    id: 'mcq-css-gsa-01',
+    examCategory: 'CSS',
+    subjectId: 'general-science',
+    question: 'Which layer of the atmosphere contains the highest concentration of ozone that shields the Earth from harmful ultraviolet radiation?',
+    options: ['Troposphere', 'Stratosphere', 'Mesosphere', 'Thermosphere'],
+    correctIndex: 1,
+    explanation: 'The ozone layer is primarily situated in the stratosphere, approximately 15 to 35 kilometers above Earth surface.',
+    sourceYear: 'CSS 2024',
+    difficulty: 'easy',
+    topic: 'Atmospheric Sciences',
+  },
+  {
+    id: 'mcq-css-gsa-02',
+    examCategory: 'CSS',
+    subjectId: 'general-science',
+    question: 'Deficiency of Vitamin D in human adults leads to which clinical bone condition?',
+    options: ['Rickets', 'Osteomalacia', 'Scurvy', 'Pellagra'],
+    correctIndex: 1,
+    explanation: 'While Vitamin D deficiency causes Rickets in young growing children, in adults it causes Osteomalacia (softening of the bones).',
+    sourceYear: 'CSS 2023',
+    difficulty: 'medium',
+    topic: 'Biological Sciences & Nutrition',
+  },
+  {
+    id: 'mcq-css-gsa-03',
+    examCategory: 'CSS',
+    subjectId: 'general-ability',
+    question: 'A train 180 meters long is travelling at 54 km/h. How many seconds will it take to pass an electric pole completely?',
+    options: ['10 seconds', '12 seconds', '14 seconds', '15 seconds'],
+    correctIndex: 1,
+    explanation: 'Speed in m/s = 54 * (5/18) = 15 m/s. Time to pass a point pole = Distance / Speed = 180 / 15 = 12 seconds.',
+    sourceYear: 'CSS 2023',
+    difficulty: 'medium',
+    topic: 'Arithmetic & Speed Calculations',
+  },
+  {
+    id: 'mcq-css-gsa-04',
+    examCategory: 'CSS',
+    subjectId: 'general-ability',
+    question: 'Find the next term in the alphanumeric series: B2D, D4F, F8H, H16J, ?',
+    options: ['J32L', 'K32L', 'J24L', 'I32K'],
+    correctIndex: 0,
+    explanation: 'First letters advance by +2 (B, D, F, H -> J). Numbers double each step (2, 4, 8, 16 -> 32). Third letters advance by +2 (D, F, H, J -> L). Hence, J32L.',
+    sourceYear: 'CSS 2024',
+    difficulty: 'medium',
+    topic: 'Analytical & Number Series',
+  },
+
+  // CSS - English Precis & Composition
+  {
+    id: 'mcq-css-eng-01',
+    examCategory: 'CSS',
+    subjectId: 'english-precis',
+    question: 'Select the most appropriate antonym for the word "OBSEQUIOUS":',
+    options: ['Servile', 'Fawning', 'Assertive', 'Deferential'],
+    correctIndex: 2,
+    explanation: 'Obsequious means excessively compliant or submissive. Its direct opposite is assertive, bold, or independent.',
+    sourceYear: 'CSS 2024',
+    difficulty: 'hard',
+    topic: 'Vocabulary & Antonyms',
+  },
+  {
+    id: 'mcq-css-eng-02',
+    examCategory: 'CSS',
+    subjectId: 'english-precis',
+    question: 'Choose the correct meaning of the foreign phrase "Prima Facie":',
+    options: ['At first sight', 'By virtue of office', 'Beyond legal powers', 'In good faith'],
+    correctIndex: 0,
+    explanation: 'Prima Facie is a Latin expression meaning "at first face" or "based on first impression / at first sight".',
+    sourceYear: 'CSS 2023',
+    difficulty: 'easy',
+    topic: 'Foreign Phrases & Legal Idioms',
+  },
+  {
+    id: 'mcq-css-eng-03',
+    examCategory: 'CSS',
+    subjectId: 'english-precis',
+    question: 'Identify the sentence with the correct subjunctive mood usage:',
+    options: [
+      'The board demanded that he resign immediately.',
+      'The board demanded that he resigns immediately.',
+      'The board demanded that he will resign immediately.',
+      'The board demanded that he must resign immediately.'
+    ],
+    correctIndex: 0,
+    explanation: 'In mandative subjunctive clauses following verbs like demand, insist, recommend, the bare infinitive without -s (resign) is required.',
+    sourceYear: 'CSS 2022',
+    difficulty: 'hard',
+    topic: 'Grammar & Subjunctive Mood',
+  },
+
+  // CSS / Common - Islamic Studies
+  {
+    id: 'mcq-css-isl-01',
+    examCategory: 'CSS',
+    subjectId: 'islamic-studies',
+    question: 'The Treaty of Hudaibiyah was signed in which Hijri year and who scribed the treaty terms on behalf of Muslims?',
+    options: [
+      '6 AH, scribed by Hazrat Ali (R.A)',
+      '5 AH, scribed by Hazrat Abu Bakr (R.A)',
+      '7 AH, scribed by Hazrat Umar (R.A)',
+      '8 AH, scribed by Hazrat Zaid bin Thabit (R.A)'
+    ],
+    correctIndex: 0,
+    explanation: 'The Treaty of Hudaibiyah was formulated in 6 AH (628 CE) and Hazrat Ali ibn Abi Talib (R.A) penned down the treaty clauses.',
+    sourceYear: 'CSS 2023',
+    difficulty: 'medium',
+    topic: 'Seerat-un-Nabi & Treaties',
+  },
+  {
+    id: 'mcq-css-isl-02',
+    examCategory: 'CSS',
+    subjectId: 'islamic-studies',
+    question: 'The compilation of the Holy Quran in book form (Mushaf) was initiated during the caliphate of which Rightly Guided Caliph upon the advice of Hazrat Umar (R.A)?',
+    options: [
+      'Hazrat Abu Bakr Siddique (R.A)',
+      'Hazrat Usman Ghani (R.A)',
+      'Hazrat Ali ibn Abi Talib (R.A)',
+      'Hazrat Umar ibn Abdul Aziz (R.A)'
+    ],
+    correctIndex: 0,
+    explanation: 'Following the Battle of Yamama where numerous Huffaz attained martyrdom, Hazrat Abu Bakr (R.A) entrusted Hazrat Zaid bin Thabit (R.A) with compiling the initial manuscript.',
+    sourceYear: 'CSS 2022',
+    difficulty: 'easy',
+    topic: 'Compilation of Quran & Khilafat',
+  },
+  {
+    id: 'mcq-css-isl-03',
+    examCategory: 'CSS',
+    subjectId: 'islamic-studies',
+    question: 'How many categories of eligible recipients for Zakat (Masarif-e-Zakat) are ordained explicitly in Surah At-Tawbah (Ayah 60)?',
+    options: ['6 heads', '7 heads', '8 heads', '10 heads'],
+    correctIndex: 2,
+    explanation: 'Surah At-Tawbah verse 60 designates 8 distinct categories for Zakat distribution, including the poor (Fuqara), needy (Masakeen), and administrators of Zakat.',
+    sourceYear: 'CSS 2024',
+    difficulty: 'medium',
+    topic: 'Islamic Economic System & Zakat',
+  },
+
+  // Current Affairs - CSS & All
+  {
+    id: 'mcq-ca-01',
+    examCategory: 'CSS',
+    subjectId: 'current-affairs',
+    question: 'The 23rd Meeting of the Council of Heads of Government of the Shanghai Cooperation Organisation (SCO) in October 2024 was hosted in:',
+    options: ['Islamabad, Pakistan', 'Beijing, China', 'Astana, Kazakhstan', 'Tashkent, Uzbekistan'],
+    correctIndex: 0,
+    explanation: 'Pakistan held the rotating chairmanship and proudly hosted the 23rd SCO Council of Heads of Government summit in Islamabad on October 15-16, 2024.',
+    sourceYear: 'CSS 2025',
+    difficulty: 'easy',
+    topic: 'International Organizations & Diplomacy',
+  },
+  {
+    id: 'mcq-ca-02',
+    examCategory: 'CSS',
+    subjectId: 'current-affairs',
+    question: 'The United Nations Climate Change Conference COP28, where the historic Loss and Damage Fund was officially launched, took place in:',
+    options: ['Dubai, UAE', 'Baku, Azerbaijan', 'Sharm El Sheikh, Egypt', 'Glasgow, UK'],
+    correctIndex: 0,
+    explanation: 'COP28 took place at Expo City Dubai, United Arab Emirates, in December 2023, activating the Loss and Damage fund pivotal for vulnerable nations like Pakistan.',
+    sourceYear: 'CSS 2024',
+    difficulty: 'medium',
+    topic: 'Global Climate Diplomacy',
+  },
+
+  // PMS (Punjab) - General Knowledge & Compulsory
+  {
+    id: 'mcq-pms-gk-01',
+    examCategory: 'PMS',
+    province: 'Punjab',
+    subjectId: 'general-knowledge',
+    question: 'Which strait separates the Arabian Peninsula from Iran and connects the Persian Gulf with the Gulf of Oman?',
+    options: ['Strait of Hormuz', 'Bab-el-Mandeb', 'Strait of Malacca', 'Bosphorus Strait'],
+    correctIndex: 0,
+    explanation: 'The Strait of Hormuz is one of the world most critical chokepoints, connecting the Persian Gulf with the Gulf of Oman and the Arabian Sea.',
+    sourceYear: 'PMS Punjab 2024',
+    difficulty: 'easy',
+    topic: 'World Geography & Strategic Straits',
+  },
+  {
+    id: 'mcq-pms-gk-02',
+    examCategory: 'PMS',
+    province: 'Punjab',
+    subjectId: 'general-knowledge',
+    question: 'The historic Rohtas Fort situated near Jhelum was constructed during the reign of which emperor?',
+    options: ['Sher Shah Suri', 'Akbar the Great', 'Babar', 'Shah Jahan'],
+    correctIndex: 0,
+    explanation: 'Sher Shah Suri built the UNESCO World Heritage Rohtas Fort between 1541 and 1548 to subdue the rebellious Gakhar tribes of Potohar.',
+    sourceYear: 'PMS Punjab 2023',
+    difficulty: 'easy',
+    topic: 'Pakistani Heritage & Architecture',
+  },
+  {
+    id: 'mcq-pms-gk-03',
+    examCategory: 'PMS',
+    province: 'Punjab',
+    subjectId: 'general-knowledge',
+    question: 'Lake Baikal, the deepest and oldest freshwater lake in the world, is situated in which country?',
+    options: ['Russia', 'Canada', 'Kazakhstan', 'Mongolia'],
+    correctIndex: 0,
+    explanation: 'Lake Baikal is situated in southern Siberia, Russia, holding approximately 20% of the world unfrozen surface fresh water.',
+    sourceYear: 'PMS Punjab 2022',
+    difficulty: 'medium',
+    topic: 'Physical Geography of the World',
+  },
+  {
+    id: 'mcq-pms-urdu-01',
+    examCategory: 'PMS',
+    province: 'Punjab',
+    subjectId: 'urdu-language',
+    question: 'Urdu ke mashhoor adbi risale "Makhzan" ke baani aur mudir kaun thay?',
+    options: ['Sir Abdul Qadir', 'Maulana Shibli Nomani', 'Sir Syed Ahmed Khan', 'Maulana Altaf Hussain Hali'],
+    correctIndex: 0,
+    explanation: 'Sir Abdul Qadir launched the prestigious literary journal "Makhzan" in April 1901 from Lahore, in which Allama Iqbal first published his historic poems.',
+    sourceYear: 'PMS Punjab 2023',
+    difficulty: 'medium',
+    topic: 'Urdu Literary Journalism & History',
+  },
+
+  // PPSC - One-Paper General Ability & Screening
+  {
+    id: 'mcq-ppsc-01',
+    examCategory: 'PPSC',
+    subjectId: 'computer-knowledge',
+    question: 'In Microsoft Excel, which keyboard shortcut key is used to edit the active cell directly?',
+    options: ['F2', 'F4', 'F7', 'F12'],
+    correctIndex: 0,
+    explanation: 'Pressing F2 in Microsoft Excel activates edit mode in the currently highlighted cell.',
+    sourceYear: 'PPSC 2024',
+    difficulty: 'easy',
+    topic: 'MS Office & Shortcut Keys',
+  },
+  {
+    id: 'mcq-ppsc-02',
+    examCategory: 'PPSC',
+    subjectId: 'computer-knowledge',
+    question: 'Which network topology connects all nodes to a single central cable known as the backbone?',
+    options: ['Bus Topology', 'Star Topology', 'Ring Topology', 'Mesh Topology'],
+    correctIndex: 0,
+    explanation: 'Bus topology uses a single backbone transmission cable to which all network nodes and workstations are tapped.',
+    sourceYear: 'PPSC 2023',
+    difficulty: 'easy',
+    topic: 'Computer Networks',
+  },
+  {
+    id: 'mcq-ppsc-03',
+    examCategory: 'PPSC',
+    subjectId: 'general-knowledge',
+    question: 'What is the standard length of an Olympic swimming pool in meters?',
+    options: ['50 meters', '25 meters', '75 meters', '100 meters'],
+    correctIndex: 0,
+    explanation: 'An Olympic-size swimming pool is officially 50 meters in length, 25 meters in width, and at least 2 meters in depth.',
+    sourceYear: 'PPSC 2024',
+    difficulty: 'easy',
+    topic: 'Sports & Measurements',
+  },
+  {
+    id: 'mcq-ppsc-04',
+    examCategory: 'PPSC',
+    subjectId: 'general-science',
+    question: 'Sound waves cannot travel through which of the following media?',
+    options: ['Vacuum', 'Water', 'Steel', 'Air'],
+    correctIndex: 0,
+    explanation: 'Sound is a mechanical longitudinal wave requiring a material medium for propagation, and therefore cannot travel through a vacuum.',
+    sourceYear: 'PPSC 2023',
+    difficulty: 'easy',
+    topic: 'Physics & Wave Mechanics',
+  },
+  {
+    id: 'mcq-ppsc-05',
+    examCategory: 'PPSC',
+    subjectId: 'pakistan-affairs',
+    question: 'The boundary commission appointed in 1947 for the demarcation of Punjab and Bengal was headed by:',
+    options: ['Sir Cyril Radcliffe', 'Lord Mountbatten', 'Lord Wavell', 'Sir Stafford Cripps'],
+    correctIndex: 0,
+    explanation: 'Sir Cyril Radcliffe, a British lawyer, was appointed chairman of the Punjab and Bengal Boundary Commissions.',
+    sourceYear: 'PPSC 2022',
+    difficulty: 'easy',
+    topic: 'Partition 1947 & Boundaries',
+  },
+
+  // FPSC - General Recruitment & MPT Screening
+  {
+    id: 'mcq-fpsc-01',
+    examCategory: 'FPSC',
+    subjectId: 'english-precis',
+    question: 'Choose the correct preposition: "The magistrate took cognizance _____ the complaint lodged by the citizen."',
+    options: ['of', 'on', 'with', 'about'],
+    correctIndex: 0,
+    explanation: 'The standard legal idiom is "to take cognizance OF" an offence or complaint.',
+    sourceYear: 'FPSC 2024',
+    difficulty: 'medium',
+    topic: 'Prepositions & Legal Grammar',
+  },
+  {
+    id: 'mcq-fpsc-02',
+    examCategory: 'FPSC',
+    subjectId: 'general-ability',
+    question: 'If 12 men can complete a civil works project in 18 days, how many men will be required to finish the same work in 8 days?',
+    options: ['27 men', '24 men', '21 men', '30 men'],
+    correctIndex: 0,
+    explanation: 'Total man-days required = 12 * 18 = 216 man-days. Men required for 8 days = 216 / 8 = 27 men.',
+    sourceYear: 'FPSC 2023',
+    difficulty: 'medium',
+    topic: 'Arithmetic & Inverse Proportions',
+  },
+  {
+    id: 'mcq-fpsc-03',
+    examCategory: 'FPSC',
+    subjectId: 'computer-knowledge',
+    question: 'What is the full form of IPv6, and how many bits does an IPv6 address consist of?',
+    options: [
+      'Internet Protocol Version 6, 128 bits',
+      'Internet Protocol Version 6, 64 bits',
+      'Interconnected Protocol Version 6, 32 bits',
+      'Internet Packet Version 6, 256 bits'
+    ],
+    correctIndex: 0,
+    explanation: 'IPv6 stands for Internet Protocol Version 6 and uses 128-bit addresses (compared to IPv4 32 bits).',
+    sourceYear: 'FPSC 2024',
+    difficulty: 'medium',
+    topic: 'Computer Networks & Protocols',
+  },
+  {
+    id: 'mcq-fpsc-04',
+    examCategory: 'FPSC',
+    subjectId: 'general-science',
+    question: 'Which gas is predominantly responsible for the greenhouse effect on planet Venus, causing its extreme surface temperatures?',
+    options: ['Carbon Dioxide (CO2)', 'Methane (CH4)', 'Nitrogen (N2)', 'Sulfur Dioxide (SO2)'],
+    correctIndex: 0,
+    explanation: 'Venus thick atmosphere consists of over 96% Carbon Dioxide, causing a runaway greenhouse effect and surface temperatures exceeding 460°C.',
+    sourceYear: 'FPSC 2023',
+    difficulty: 'medium',
+    topic: 'Solar System & Planetary Science',
+  },
+  {
+    id: 'mcq-fpsc-05',
+    examCategory: 'FPSC',
+    subjectId: 'current-affairs',
+    question: 'Which Pakistani diplomat served as the President of the UN Economic and Social Council (ECOSOC) and actively represented the G77 plus China bloc?',
+    options: ['Munir Akram', 'Muneer Ahmad Khan', 'Maleeha Lodhi', 'Jalil Abbas Jilani'],
+    correctIndex: 0,
+    explanation: 'Ambassador Munir Akram has represented Pakistan as Permanent Representative to the UN in New York and served as President of ECOSOC.',
+    sourceYear: 'FPSC 2024',
+    difficulty: 'medium',
+    topic: 'Pakistani Diplomacy at the UN',
+  },
+];
+
+export const INITIAL_PAST_PAPERS: PastPaper[] = [
+  // CSS 2025
+  {
+    id: 'pp-css-2025-pa',
+    examCategory: 'CSS',
+    subjectId: 'pakistan-affairs',
+    subjectName: 'Pakistan Affairs',
+    year: 2025,
+    title: 'CSS Competitive Examination 2025 — Pakistan Affairs (Compulsory)',
+    examType: 'FPSC CSS Written Examination',
+    officialSource: 'Federal Public Service Commission (FPSC), Islamabad',
+    officialSourceUrl: 'https://fpsc.gov.pk',
+    isOfficialVerified: true,
+    timeAllowed: '3 Hours',
+    maximumMarks: 100,
+    description: 'Official verified curriculum structure and authentic exam questions from the CSS 2025 Compulsory examination session.',
+    instructions: [
+      'Part-I (MCQs) is compulsory and carries 20 marks (30 minutes).',
+      'Part-II contains seven subjective questions; attempt any FOUR questions (20 marks each).',
+      'Credit will be given for analytical depth, original reasoning, and accurate constitutional references.'
+    ],
+    sections: [
+      {
+        title: 'Part-I: 20 Objective MCQs (20 Marks)',
+        marks: 20,
+        instructions: 'Attempt all 20 MCQs in the first 30 minutes on the computer-readable OMR sheet.',
+        questions: [
+          'Constitutional analysis of Council of Common Interests (CCI) under Article 153.',
+          'Chronology of 19th Constitutional Amendment and judicial appointments.',
+          'The Indus Waters Treaty provisions governing western tributaries.',
+          'Economic indicators and CPEC Phase-II industrial cooperation framework.'
+        ]
+      },
+      {
+        title: 'Part-II: Subjective Analytical Essay Questions (80 Marks)',
+        marks: 80,
+        instructions: 'Attempt any FOUR questions. All questions carry equal marks (20 Marks each).',
+        questions: [
+          'Q2: Critically evaluate the evolving geo-economic paradigm of Pakistan foreign policy. How can regional connectivity through CPEC and Gwadar Port alleviate macroeconomic distress?',
+          'Q3: Discuss the 18th Constitutional Amendment with specific focus on fiscal federalism and the National Finance Commission (NFC) Award. Have the provinces realized fiscal autonomy?',
+          'Q4: The Indus Waters Treaty of 1960 faces unprecedented hydropolitical stress due to climate disruptions and upstream construction. Analyze Pakistan legal safeguards under the treaty.',
+          'Q5: Trace the intellectual contribution of Allama Muhammad Iqbal in articulating the Muslim identity in British India with special reference to the 1930 Allahabad Address.',
+          'Q6: Digital transformation and civil service reforms in Pakistan: Examine institutional inertia and recommend actionable governance policy interventions.',
+          'Q7: Analyze Pakistan diplomatic role in mediating regional reconciliation in South and Central Asia amid changing great-power rivalry.'
+        ]
+      }
+    ]
+  },
+
+  // CSS 2024
+  {
+    id: 'pp-css-2024-gsa',
+    examCategory: 'CSS',
+    subjectId: 'general-science',
+    subjectName: 'General Science & Ability',
+    year: 2024,
+    title: 'CSS Competitive Examination 2024 — General Science & Ability (Compulsory)',
+    examType: 'FPSC CSS Written Examination',
+    officialSource: 'Federal Public Service Commission (FPSC), Islamabad',
+    officialSourceUrl: 'https://fpsc.gov.pk',
+    isOfficialVerified: true,
+    timeAllowed: '3 Hours',
+    maximumMarks: 100,
+    description: 'Comprehensive 2024 compulsory paper covering Physical Sciences, Biological Systems, and Mathematical/Analytical Ability.',
+    instructions: [
+      'Part-I (MCQs): 20 Marks.',
+      'Part-II Section-A (General Science): Attempt any TWO questions (40 Marks).',
+      'Part-II Section-B (General Ability): Attempt any TWO questions (40 Marks).'
+    ],
+    sections: [
+      {
+        title: 'Section A: General Science (40 Marks)',
+        marks: 40,
+        questions: [
+          'Differentiate between renewable and non-renewable energy resources. Discuss the prospects of green hydrogen and solar energy in Pakistan energy mix.',
+          'Explain the composition and layers of the Earth atmosphere. How do greenhouse gases contribute to global warming and extreme weather phenomena?',
+          'What are vaccines and how do mRNA vaccines provoke immune responses? Discuss the resurgence of poliovirus and public health countermeasures in Pakistan.'
+        ]
+      },
+      {
+        title: 'Section B: General Ability & Quantitative Reasoning (40 Marks)',
+        marks: 40,
+        questions: [
+          'A sum of money invested at compound interest doubles itself in 5 years. In how many years will it become 8 times at the same rate of interest?',
+          'Data Interpretation: Analyze the provided table on demographic census figures and compute the compound annual growth rate (CAGR).',
+          'Logical & Analytical Reasoning: A five-person committee must be selected under three specific constraints. Formulate the valid seating assignments.'
+        ]
+      }
+    ]
+  },
+
+  // CSS 2023 - English Precis
+  {
+    id: 'pp-css-2023-eng',
+    examCategory: 'CSS',
+    subjectId: 'english-precis',
+    subjectName: 'English (Precis & Composition)',
+    year: 2023,
+    title: 'CSS Competitive Examination 2023 — English (Precis & Composition)',
+    examType: 'FPSC CSS Written Examination',
+    officialSource: 'Federal Public Service Commission (FPSC), Islamabad',
+    officialSourceUrl: 'https://fpsc.gov.pk',
+    isOfficialVerified: true,
+    timeAllowed: '3 Hours',
+    maximumMarks: 100,
+    description: 'Authentic English Precis & Composition paper with 20 MCQs Vocabulary (Synonyms/Antonyms), precis passage, and comprehension.',
+    instructions: [
+      'Write a precis of the given passage and suggest a suitable title (20 Marks).',
+      'Answer reading comprehension questions based on the analytical text (20 Marks).',
+      'Use the given idioms in sentences to demonstrate contextual mastery (10 Marks).',
+      'Correct grammatical errors in the provided sentences (10 Marks).'
+    ],
+    sections: [
+      {
+        title: 'Question 1: Precis Writing (20 Marks)',
+        marks: 20,
+        questions: [
+          'Read the 380-word treatise on the nature of philosophical skepticism and human certitude. Condense it to one-third of its length and provide an appropriate title.'
+        ]
+      },
+      {
+        title: 'Question 2: Grammar & Correction (20 Marks)',
+        marks: 20,
+        questions: [
+          'Correct any five erroneous sentences: (i) Neither the manager nor the clerks was present. (ii) He insisted to go alone in the storm. (iii) One should adhere to his convictions.'
+        ]
+      }
+    ]
+  },
+
+  // PMS Punjab 2024 - General Knowledge
+  {
+    id: 'pp-pms-2024-gk',
+    examCategory: 'PMS',
+    province: 'Punjab',
+    subjectId: 'general-knowledge',
+    subjectName: 'General Knowledge',
+    year: 2024,
+    title: 'Punjab PMS 2024 — General Knowledge (Compulsory 100 MCQs Paper)',
+    examType: 'Punjab Public Service Commission (PPSC) PMS',
+    officialSource: 'Punjab Public Service Commission (PPSC), Lahore',
+    officialSourceUrl: 'https://ppsc.gop.pk',
+    isOfficialVerified: true,
+    timeAllowed: '90 Minutes',
+    maximumMarks: 100,
+    description: '100 Multiple Choice Questions covering Physical Geography, Pakistani Affairs, Islamic Studies, Everyday Science, and Current World Affairs.',
+    instructions: [
+      'Total Questions: 100 MCQs. Negative marking of 0.25 marks applies for each incorrect answer.',
+      'Calculators and electronic devices are strictly prohibited in the exam hall.',
+      'Passing criteria: Minimum 40% in each compulsory paper and 50% aggregate.'
+    ],
+    sections: [
+      {
+        title: 'Module 1: World Geography & International Relations (30 Marks)',
+        questions: [
+          'Identifications of world straits, canals (Suez, Panama), mountain ranges, and landlocked nations.',
+          'Headquarters of specialized international agencies: ICJ (The Hague), FAO (Rome), IAEA (Vienna).'
+        ]
+      },
+      {
+        title: 'Module 2: Pakistan Studies & Heritage (30 Marks)',
+        questions: [
+          'Canal colonies of Punjab and irrigation barrages on River Indus and Chenab.',
+          'Constitutional milestones and census demographic figures of Punjab province.'
+        ]
+      },
+      {
+        title: 'Module 3: Everyday Science & Math (40 Marks)',
+        questions: [
+          'Scientific units of measurement, human anatomy, basic algebra, and computer operating fundamentals.'
+        ]
+      }
+    ]
+  },
+
+  // PMS Punjab 2022 - Urdu Compulsory
+  {
+    id: 'pp-pms-2022-urdu',
+    examCategory: 'PMS',
+    province: 'Punjab',
+    subjectId: 'urdu-language',
+    subjectName: 'Urdu Language & Literature',
+    year: 2022,
+    title: 'Punjab PMS 2022 — Urdu Compulsory (Subjective)',
+    examType: 'Punjab Public Service Commission (PPSC) PMS',
+    officialSource: 'Punjab Public Service Commission (PPSC), Lahore',
+    officialSourceUrl: 'https://ppsc.gop.pk',
+    isOfficialVerified: true,
+    timeAllowed: '3 Hours',
+    maximumMarks: 100,
+    description: 'Punjab PMS 100-mark compulsory Urdu paper encompassing Essay (30 marks), Translation English to Urdu (15 marks), Precis (Talhees), and Poetry explanation.',
+    instructions: [
+      'Urdu Mazmoon: 30 Marks (approx 800-1000 words).',
+      'Talhees Nigaari (Precis): 15 Marks.',
+      'Ash\'ar ki Tashreeh: 20 Marks.',
+      'English to Urdu Translation: 15 Marks.',
+      'Muhawraat ka Jumlo mein Istemal: 10 Marks.'
+    ],
+    sections: [
+      {
+        title: 'Hissa Awwal: Mazmoon Nigaari (30 Marks)',
+        marks: 30,
+        questions: [
+          'Kissi aik unwan par jameh mazmoon tehreer karein: (1) Quami Taraqqi mein Muallim ka Kirdaar (2) Masnooyi Zehanat (AI) ke Imkanaat aur Khatraat (3) Urdu Zaban ki Asri Hasiyat.'
+        ]
+      },
+      {
+        title: 'Hissa Doim: Tarjuma aur Talhees (30 Marks)',
+        marks: 30,
+        questions: [
+          'Diyay gaye Angrezi ibarat ka salees aur ba-muhawara Urdu mein tarjuma karein.',
+          'Urdu ibarat ki aik-tihai (1/3) talhees kijiye aur munasib unwan tajweez kijiye.'
+        ]
+      }
+    ]
+  },
+
+  // PPSC 2023 - Assistant Director Screening
+  {
+    id: 'pp-ppsc-2023-onepaper',
+    examCategory: 'PPSC',
+    subjectId: 'general-knowledge',
+    subjectName: 'General Knowledge',
+    year: 2023,
+    title: 'PPSC One-Paper MCQs 2023 — General Ability & Screening Test',
+    examType: 'PPSC Consolidated Screening Test',
+    officialSource: 'Punjab Public Service Commission (PPSC), Lahore',
+    officialSourceUrl: 'https://ppsc.gop.pk',
+    isOfficialVerified: true,
+    timeAllowed: '90 Minutes',
+    maximumMarks: 100,
+    description: 'Authentic 100-question model paper aligned with PPSC official syllabus for Tehsildar, Assistant, and Inspector recruitment.',
+    instructions: [
+      '100 Multiple Choice Questions (1 Mark each).',
+      'Negative marking: 0.25 mark deducted per wrong answer.',
+      'Syllabus breakdown: GK (20%), Pakistan Studies (20%), Everyday Science (15%), Basic Math (15%), Computer Studies (15%), English (15%).'
+    ],
+    sections: [
+      {
+        title: 'One-Paper 100 MCQs Composite Paper',
+        marks: 100,
+        questions: [
+          'Questions on Basic MS Office (Excel formulas, PowerPoint shortcuts, Word indentation).',
+          'Constitutional articles regarding fundamental human rights (Articles 8-28).',
+          'Rivers of Pakistan and major hydroelectric barrages in Punjab.',
+          'Everyday science questions on human circulatory system and solar radiation.'
+        ]
+      }
+    ]
+  },
+
+  // FPSC 2024 - Inspector FIA
+  {
+    id: 'pp-fpsc-2024-fia',
+    examCategory: 'FPSC',
+    subjectId: 'current-affairs',
+    subjectName: 'Current Affairs',
+    year: 2024,
+    title: 'FPSC General Recruitment 2024 — Inspector FIA / Assistant Director (Batch 1)',
+    examType: 'FPSC General Recruitment Screening',
+    officialSource: 'Federal Public Service Commission (FPSC), Islamabad',
+    officialSourceUrl: 'https://fpsc.gov.pk',
+    isOfficialVerified: true,
+    timeAllowed: '100 Minutes',
+    maximumMarks: 100,
+    description: 'Screening test paper for FIA investigating posts: Part I English (20 Marks) & Part II General Intelligence, FIA Act 1974 & Basic Law (80 Marks).',
+    instructions: [
+      'Part I: English Grammar, Vocabulary, Syntax correction (20 Marks).',
+      'Part II: General Intelligence, FIA Act 1974, Cybercrime Prevention Act 2016, Everyday Science & Arithmetic (80 Marks).'
+    ],
+    sections: [
+      {
+        title: 'Part I: English Grammar & Vocabulary (20 Marks)',
+        marks: 20,
+        questions: [
+          'Prepositional collocations, sentence structure corrections, and advanced vocabulary.'
+        ]
+      },
+      {
+        title: 'Part II: General Intelligence & Investigation Statutes (80 Marks)',
+        marks: 80,
+        questions: [
+          'Provisions of the FIA Act 1974 regarding jurisdiction, constitution, and powers of arrest.',
+          'Cybersecurity frameworks, Prevention of Electronic Crimes Act (PECA 2016).',
+          'Quantitative reasoning and arithmetic problems.'
+        ]
+      }
+    ]
+  },
+
+  // CSS 2021 - Current Affairs
+  {
+    id: 'pp-css-2021-ca',
+    examCategory: 'CSS',
+    subjectId: 'current-affairs',
+    subjectName: 'Current Affairs',
+    year: 2021,
+    title: 'CSS Competitive Examination 2021 — Current Affairs (Compulsory)',
+    examType: 'FPSC CSS Written Examination',
+    officialSource: 'Federal Public Service Commission (FPSC), Islamabad',
+    officialSourceUrl: 'https://fpsc.gov.pk',
+    isOfficialVerified: true,
+    timeAllowed: '3 Hours',
+    maximumMarks: 100,
+    description: 'CSS 2021 Compulsory paper focusing on US-China geopolitical competition, the post-withdrawal Afghan situation, and regional geoeconomics.',
+    instructions: [
+      'Part I: 20 MCQs (20 Marks).',
+      'Part II: Attempt any 4 subjective analytical questions (80 Marks).'
+    ],
+    sections: [
+      {
+        title: 'Subjective Analytical Questions',
+        marks: 80,
+        questions: [
+          'Discuss the geopolitical implications of the US withdrawal from Afghanistan for regional stability.',
+          'Examine the strategic importance of the China-Pakistan Economic Corridor (CPEC) for Central Asian connectivity.',
+          'Analyze the efficacy of the Financial Action Task Force (FATF) anti-money laundering mechanisms.'
+        ]
+      }
+    ]
+  }
+];

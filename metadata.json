@@ -1,0 +1,6 @@
+{
+  "name": "ExamPrep Pakistan - CSS, PMS, PPSC & FPSC Competitive Exam Platform",
+  "description": "Comprehensive preparation platform for Pakistani competitive examinations including CSS, Punjab PMS, PPSC, and FPSC with verified past papers (2021-2025), timed MCQ practice tests, real-time scoring, and secure result verification.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
